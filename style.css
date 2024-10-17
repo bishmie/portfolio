@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.navibar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1a1919;
+}
+
+.logo {
+    color: #ecb80c;
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: bolder;
+    margin-left: 60px;
+    font-size: 18px;
+}
+
+.naviList {
+    display: flex;
+    justify-content: center;
+}
+
+.naviList li {
+    list-style-type: none;
+}
+
+.naviList li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 13px;
+}
+
+li a:hover {
+    color: #ecb80c;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Size of the icon */
+    color: #ecb80c; /* Icon color */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 60px; /* Align with the logo margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navibar {
+        flex-direction: row; /* Keep items in a row */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 20px; /* Adjust logo margin for smaller screens */
+    }
+
+    .naviList {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        display: none; /* Hide the menu by default */
+        align-items: flex-start; /* Align items to the left */
+        position: absolute; /* Position menu items absolutely */
+        background-color: #1a1919; /* Background for dropdown */
+        z-index: 1000; /* Bring to front */
+        left: 0; /* Align to the left */
+    }
+
+    .naviList li {
+        margin: 5px 0; /* Add some space between links */
+    }
+
+    .naviList li a {
+        padding-right: 0; /* Remove right padding */
+        font-size: 14px; /* Slightly larger text for better readability */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 16px; /* Smaller logo font size for small screens */
+    }
+
+    .naviList li a {
+        font-size: 12px; /* Smaller text for mobile devices */
+    }
+}
+.second-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top: 0px; */
+}
+.title-two{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+.content-section p{
+    color:white;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+.img2{
+    
+    height: 600px;
+    background-position: center;
+    /* transform: translateY(-20px); */
+}
+.title-style{
+    color: white;
+    transform: translateX(60px);
+}
+.title-style h1{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+.title-style h2{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+.title-style h3{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.header-btn {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #000000;
+    color: white;
+    border: 1px solid #f1c40f;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Inter Tight", sans-serif;
+    border-radius: 6px;
+    transform: translateX(60px);
+
+}
+.am {
+    color: #f1c40f;
+}
+
+.social-icon {
+    position: relative;
+    text-decoration: none;
+    color: #f1c40f; /* Default color */
+    font-size: 19px;
+    transition: transform 0.3s, color 0.3s;
+    margin-bottom: 10px;
+    background-color: rgba(70, 66, 53, 0.185);
+    width: 33px;
+    height: 33px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+.social-icons {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+    color: white; /* Change color on hover */
+}
