@@ -67,5 +67,115 @@
   </div>
 
 </section>
+
+<!-- about me  -->
+<section class="about-me">
+    <div class="about-img">
+     <img src="Images/meAbout.jpg" class="aboutimg">
+    </div>
+    <div class="border">
+     <div class="experience">
+         <h1>1+</h1>
+         <h4>Years Of Experiences</h4>
+         </div>
+         <div class="clients">
+             <h1>10+</h1>
+             <h4>Happy clients</h4>
+         </div>
+    </div> 
+    <div class="about-desc">
+     
+     <h1>ABOUT <span class="me"> ME</span> </h1>
+     <h2>AN UI/UX ENGINEER FROM SRI LANKA</h2>
+     <div class="about-details">
+         <table>
+             <tr>
+               <td><strong>First Name:</strong></td>
+               <td>Bishmi</td>
+               <td><strong>Last Name:</strong></td>
+               <td>Witharana</td>
+             </tr>
+             <tr>
+               <td><strong>Age:</strong></td>
+               <td>22 years</td>
+               <td><strong>Address:</strong></td>
+               <td>Baduraliya, Kalutara</td>
+             </tr>
+             <tr>
+                 <td><strong>Contact:</strong></td>
+                 <td>0781302664</td>
+                 <td><strong>Email:</strong></td>
+                 <td>Bishmimalshi@gmail.com</td>
+               </tr>
+               <tr>
+                 <td><strong>Nationality:</strong></td>
+                 <td>Sri Lanka</td>
+                 <td><strong>Edu Status:</strong></td>
+                 <td>Undergraduate</td>
+               </tr>
+           </table>
+           
+     </div>
+    
+     
+    </div>
+ </section>
+ <!-- education starts -->
+ <section class="education">
+    <h1>EDUCATION</h1>
+    <div class="edu-cards">
+        
+        <div class="line"></div> <!-- Vertical line -->
+        
+        <div class="primary-edu">
+            <div class="dot"></div> <!-- Animated dot -->
+            <div class="primary">
+                <i class="fa-solid fa-school"></i>
+                <p class="year1">2013-2021</p>
+                <h2>Secondary Education - Ananda Sastralaya</h2>
+                <p class="edu-des">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                    posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, 
+                    ullamcorper sit amet ligula.</p>
+            </div>
+        </div>
+        
+        <div class="secondary-edu"></div>
+            
+        <div class="secondary">
+            <div class="dot"></div> <!-- Animated dot -->
+            <i class="fa-solid fa-user-graduate"></i>
+            <p class="year2"> 2023 - Present</p>
+            <h2>Higher Education - IJSE Institute</h2>
+            <p class="edu-des">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, 
+                ullamcorper sit amet ligula.</p>
+        </div>
+    </div>
+</section>
+
+<!-- skill starts -->
+
+
+<!-- skill ends -->
+
+
+  <!-- education ends -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const aboutImg = document.querySelector('.aboutimg');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutImg.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.2 }); // Adjust threshold for when the animation triggers
+
+        observer.observe(aboutImg);
+    });
+</script>
+
+
+
 </body>
 </html>

@@ -191,3 +191,267 @@ li a:hover {
     transform: scale(1.1); /* Slightly enlarge the icon */
     color: white; /* Change color on hover */
 }
+
+
+/* about me starts */
+.about-me{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+     background-color: #0e0d0d;
+    margin-top: 20px;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
+    height: 100vh;
+}
+.aboutimg {
+    height: 460px;
+    width: 460px;
+    margin-top: 60px;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    transition: all 0.8s ease-out; /* Smooth transition for both opacity and transform */
+}
+
+/* Class added when image is in view */
+.aboutimg.animate-in {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Grow to normal size */
+}
+
+.about-desc{
+   
+    font-family: "Inter Tight", sans-serif;
+}
+.about-desc h1{
+    font-size: 40px;
+    font-family: "Lexend Tera", sans-serif;
+    /* transform: translateX(); */
+}
+.about-desc h2{
+    font-size: 30px;
+    font-family: "Istok Web", sans-serif;
+    margin-top: 30px;
+
+}
+.experience h4{
+    font-family: "Lilita One", sans-serif;
+    
+}
+.clients h4{
+    font-family: "Lilita One", sans-serif;
+}
+.experience h1{
+    color: #ecb80c;
+    font-size: 54px;
+}
+.clients h1{
+    color: #ecb80c;
+    font-size: 54px;
+    
+}
+.me{
+    color: #ecb80c;
+    /* font-family: "Lilita One", sans-serif; */
+    font-size: 50px;
+    
+    /* font-family: "Lilita One", sans-serif; */
+}
+
+.about-details{
+    margin-top: 20px;
+}
+
+.about-details table {
+    width: 100%;
+    border-collapse: separate; /* Keep cells separate for spacing */
+    border-spacing: 0 10px; /* Add vertical space between rows */
+    font-size: 14px;
+    border: 1px solid #7A7A7A;
+  }
+  
+  .about-details td {
+    padding: 5px 5px; /* Add padding inside cells */
+  }
+
+  .border{
+    height: 100px;
+    width: 600px;
+    background-color: #202020;
+    position:absolute;
+    top: -46px;
+    right: 50px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+/* about me ends */
+
+
+/* education starts */
+.edu-cards{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:100px;
+    left: 400px;
+}
+.education{
+    height: 100vh;
+    position: relative;
+    margin-top: 40px;
+    height: 100vh;
+}
+.education h1{
+    font-family: "Lexend Tera", sans-serif;
+    color: #ecb80c;
+    font-size: 40px;
+    position: absolute;
+    left:120px;
+
+}
+.fa-school{
+    color: #ecb80c;
+    background-color: rgb(25, 26, 26);
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.fa-user-graduate{
+    color: #ecb80c;
+    background-color: rgb(25, 26, 26);
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.primary-edu{
+    position: relative;
+}
+
+.secondary-edu{
+    position: relative;
+}
+.year1{
+    color: white;
+    background-color:#202020;
+    width: 100px;
+    border-radius: 5px;
+     position: absolute; 
+    top: 13px;
+    left: 60px; 
+}
+.year2{
+    color: white;
+    background-color:#202020;
+    width: 100px;
+    border-radius:5px;
+     position: absolute;
+    top:15px;
+    left: 60px; 
+}
+/* .primary-edu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+.primary{
+    color: white;
+    /* position: absolute;
+    top:80px;
+    left:190px; */
+
+}
+.edu-des{
+    width:500px;
+    font-family: "Istok Web", sans-serif;
+    font-size: 14px;
+    color: #7A7A7A;
+
+    
+}
+.secondary{
+    color:white;
+    position: absolute;
+    top:230px;
+    
+}
+
+.primary h2{
+    margin-bottom: 10px;
+    font-family: "Inter Tight", sans-serif;
+}
+
+
+/* .primary-edu{
+    position: absolute;
+    left:100px;
+
+} */
+.secondary h2{
+    margin-bottom: 10px;
+    font-family: "Inter Tight", sans-serif;
+
+}
+
+
+.line {
+    position: absolute;
+    width: 3px;
+    background-color: #ecb80c;
+    height: 400px;
+    top: 2px;
+    left: -40px;
+    z-index: 0;
+}
+
+/* Animated Dot */
+.dot {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: #ecb80c;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    z-index: 1;
+    left: -47px;
+}
+
+.primary-edu .dot {
+    top: 30px; /* Dot position for the first qualification */
+}
+
+.secondary-edu + .secondary .dot {
+    top: 20px; /* Dot position for the second qualification */
+}
+
+/* Dot Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* education ends */
