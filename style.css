@@ -725,4 +725,55 @@ li a:hover {
 }
 
 
+
+
 /* project ends */
+/* portfolio starts */
+.portfolio{
+    background-color: #1a1919;
+    padding-top: 30px;
+    position: relative;
+}
+.portfolio h1{
+    color: #ecb80c;
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    padding-left: 560px;
+    padding-bottom: 40px;
+    
+
+    
+
+}
+
+.portfolio-container{
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items in the container */
+    margin: 10px 0;
+    gap:30px;
+}
+.image1, .image2 {
+    display: inline-block; /* Allow images to be side by side */
+    margin: 10px; /* Add some space around the images */
+}
+
+.image3 {
+    margin-top: 20px; /* Add space above the centered image */
+}
+
+.port-img{
+    width: 500px;
+    
+}
+.port-btn{
+    width: 160px;
+    height: 40px;
+    background-color: #ecb80c;
+    color: white;
+    border: none;
+    position: absolute;
+    left:500px;
+    
+}
+/* portfolio ends */
