@@ -140,11 +140,41 @@ li a:hover {
     font-size: 65px;
     margin-bottom: 15px;
 }
-.title-style h3{
+.text{
     font-family: "Inter Tight", sans-serif;
     font-size: 50px;
     margin-bottom: 15px;
 }
+
+.text span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 0.3s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay each letter animation */
+  .text span:nth-child(1) { animation-delay: 0.1s; }
+  .text span:nth-child(2) { animation-delay: 0.2s; }
+  .text span:nth-child(3) { animation-delay: 0.3s; }
+  .text span:nth-child(4) { animation-delay: 0.4s; }
+  .text span:nth-child(5) { animation-delay: 0.5s; }
+  .text span:nth-child(6) { animation-delay: 0.6s; }
+  .text span:nth-child(7) { animation-delay: 0.7s; }
+  .text span:nth-child(8) { animation-delay: 0.8s; }
+  .text span:nth-child(9) { animation-delay: 0.9s; }
+  .text span:nth-child(10) { animation-delay: 1s; }
+  .text span:nth-child(11) { animation-delay: 1.1s; }
 
 .header-btn {
     padding-right: 30px; 
