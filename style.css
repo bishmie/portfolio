@@ -1077,3 +1077,119 @@ li a:hover {
 
 } */
 /* footer starts */
+
+/* footer{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1d1a1a;
+    margin-top: 120px;
+    padding: 40px;
+}
+
+.navigate li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px;
+}
+.footer-services{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px; 
+}
+
+.info p{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px; 
+}
+
+.info{
+    dis
+} */
+
+footer{
+    background-color: #1d1a1a;
+}
+.footer{
+    color: white;
+   
+    margin-top: 120px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.navigate li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px;
+   
+}
+.navigate p{
+    color: #ecb80c;
+    font-size: 16px;
+    font-family: "Inter Tight", sans-serif;
+    padding-bottom: 20px;
+}
+.navigate li a:hover{
+    color: #ecb80c;
+}
+.navigate li{
+    list-style: none;
+    padding-bottom: 20px;
+}
+.footer-services{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px; 
+}
+.footer-services p{
+    padding-bottom: 20px;
+}
+.fo-service-heading{
+    color: #ecb80c;
+    font-size: 16px;
+    font-family: "Inter Tight", sans-serif;
+    padding-bottom: 20px;
+}
+.footer-services p:hover{
+    color: #ecb80c;
+}
+.iconss-p{
+    color: #ecb80c;
+    font-size: 16px;
+    font-family: "Inter Tight", sans-serif;
+    padding-bottom: 20px;
+}
+.info p{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    padding-right: 35px;
+    font-size: 15px; 
+}
+
+.info{
+  margin-bottom: 20px;
+  
+} 
+
+.info i{
+    padding-bottom: 10px;
+}
+
+.final-p{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 30px;
+}
+/* footer ends */
