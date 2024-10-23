@@ -14,6 +14,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #1a1919;
+    
 }
 
 .logo {
@@ -38,7 +39,7 @@ body {
     color: white;
     font-family: "Inter Tight", sans-serif;
     padding-right: 35px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 li a:hover {
@@ -131,17 +132,17 @@ li a:hover {
     transform: translateX(60px);
 }
 .title-style h1{
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Fahkwang", sans-serif;
     font-size: 70px;
     margin-bottom: 15px;
 }
 .title-style h2{
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Fahkwang", sans-serif;
     font-size: 65px;
     margin-bottom: 15px;
 }
 .text{
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Fahkwang", sans-serif;
     font-size: 50px;
     margin-bottom: 15px;
 }
@@ -196,6 +197,14 @@ li a:hover {
     border-radius: 6px;
     transform: translateX(-25px);   
 
+}
+.header-btn1:hover{
+    background-color: #000000;
+    border: 1px solid #ecb80c;
+}
+.header-btn2:hover{
+    background-color: #ecb80c;
+    border: none;
 }
 .header-btn2 {
     padding-right: 30px; 
@@ -259,7 +268,7 @@ li a:hover {
     margin-bottom: 20px;
     height: auto;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
 }
 .aboutimg {
     height: 460px;
@@ -279,17 +288,21 @@ li a:hover {
 .about-desc{
     color: rgb(201, 195, 195);
 
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Fahkwang", sans-serif;
 }
 .about-desc h1{
     font-size: 40px;
-    font-family: "Lexend Tera", sans-serif;
+     font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     color: white;
     /* transform: translateX(); */
 }
 .about-desc h2{
     font-size: 30px;
-    font-family: "Istok Web", sans-serif;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 30px;
 
 }
@@ -327,6 +340,7 @@ li a:hover {
 
 .about-details{
     margin-top: 20px;
+    
 }
 
 .about-details table {
@@ -334,7 +348,7 @@ li a:hover {
     border-collapse: separate; /* Keep cells separate for spacing */
     border-spacing: 0 10px; /* Add vertical space between rows */
     font-size: 14px;
-    border: 1px solid #7A7A7A;
+    /* border: 1px solid #7A7A7A; */
   }
   
   .about-details td {
