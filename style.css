@@ -51,20 +51,20 @@ li a:hover {
     display: none; 
     font-size: 24px; 
     color: #ecb80c; 
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-right: 60px; /* Align with the logo margin */
-}
+    cursor: pointer;
+    margin-right: 60px; 
+} 
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navibar {
-        flex-direction: row; /* Keep items in a row */
+        flex-direction: row; 
         align-items: center;
         justify-content: space-between;
     }
 
     .logo {
-        margin-left: 20px; /* Adjust logo margin for smaller screens */
+        margin-left: 20px;  
     }
 
     .naviList {
@@ -82,7 +82,7 @@ li a:hover {
     .naviList li {
         margin: 5px 0; /* Add some space between links */
     }
-
+    
     .naviList li a {
         padding-right: 0; /* Remove right padding */
         font-size: 14px; /* Slightly larger text for better readability */
@@ -91,7 +91,7 @@ li a:hover {
     .menu-icon {
         display: block; /* Show the menu icon */
     }
-}
+}  
 
 @media (max-width: 480px) {
     .logo {
@@ -101,7 +101,7 @@ li a:hover {
     .naviList li a {
         font-size: 12px; /* Smaller text for mobile devices */
     }
-}
+} 
 .second-part{
     display: flex;
     flex-wrap: wrap;
@@ -254,6 +254,88 @@ li a:hover {
     color: white; /* Change color on hover */
 }
 
+@media (max-width: 1024px)  {
+    .second-part{
+        margin: 20px;
+        margin-bottom: 0px;
+        
+    }
+    .title-style h1{
+        font-size:40px ;
+    }
+    .title-style h2{
+        font-size: 35px;
+    }
+    .title-style h3{
+        font-size: 30px;
+    }
+/* 
+    .btn-home{
+        gap: 30px;
+    } */
+    .header-btn1{
+        transform: translateX(40px);
+    }
+    .header-btn2{
+        transform: translateX(20px);
+    }
+    .img2{
+        width: 500px;
+        height: 600px;
+    }
+
+    .aboutimg{
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+    }
+    /* .about-desc h1{
+        font-size: 60px;
+
+    }
+    .about-desc h2{
+        font-size: 20px;
+    } */
+     .education{
+        height: auto;
+        margin-bottom: 0px;
+     }
+     .projects-heading{
+        margin-left: 0px;
+        transform: translateX(-150px);
+     }
+     .service-p{
+        margin-left: 0px;
+        transform: translateX(-150px);
+     }
+     .skills{
+        padding: 20px;
+     }
+     .portfolio h1{
+        transform: translateX(-160px);
+     }
+
+     .port-btn{
+      transform: translateX(-150px);
+     }
+     .projects-p{
+        transform: translateX(-150px);
+     }
+
+     .contact-details{
+        width: 40%;
+     }
+     .form-container input{
+        width: 70%;
+        height: 30px;
+     }
+     .contact-details{
+        padding: 30px;
+     }
+     .contact-p{
+        width: 40%;
+     }
+}
 
 /* about me starts */
 .about-me{
@@ -836,7 +918,7 @@ li a:hover {
     color: #ecb80c;
     font-size: 40px;
     font-family: "Roboto", sans-serif;
-    padding-left: 580px;
+    text-align: center;
     padding-bottom: 40px;
     
 
@@ -900,7 +982,8 @@ li a:hover {
 }
 
 .port-btn{
-   
+    display: flex;
+    justify-content: center;
     background-color: #1a1919;
     color: white;
     border: 2px solid #ecb80c;
@@ -1012,6 +1095,7 @@ li a:hover {
 .pr-title{
     color: #ecb80c;
     font-size: 40px;
+    text-align: center;
 }
 
 .fa-github{
@@ -1040,6 +1124,7 @@ li a:hover {
 .contact-h1{
     color: #ecb80c;
     font-size: 35px;
+    
 }
 
 .contact-p{
@@ -1079,13 +1164,12 @@ li a:hover {
     justify-content: flex-start;
 }
 .contact-us{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
 .form-container input{
-      width: 44%;
+      width: 70%;
       height: 40px;
       margin: 20px;
       border-radius: 2px;
@@ -1093,13 +1177,16 @@ li a:hover {
       background-color: #6b6a6a;
        
 }
+#massege {
+    height: 100px;
+}
 /* .form-row{
    display: block;
 } */
 
 .form-container{
    background-color: #1a1919;
-   width:50%;
+   
 }
 .contact-form{
     padding: 20px;
