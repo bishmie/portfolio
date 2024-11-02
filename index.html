@@ -31,11 +31,19 @@
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
 </nav>
+ <div class="blob-container">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="blob blob4"></div>
+    </div>
+
+
 
 <section class="second-part">
     <div class="content-section">
         <div class="title-style">
-            <h1 class="title-two">
+            <h1 class="title-two">  
                  <h2>I <span class="am"> am</span></h2>  
                <h1>  Bishmie Witharana</h1> 
                <div class="text">
@@ -91,6 +99,8 @@
                 <h4>Projects Done</h4>
         </div>
 </section>
+
+
 <!-- about me  -->
 <section class="about-me">
     <div class="about-img">
@@ -341,7 +351,7 @@
             <div class="skills-title">
                 <h2>Branding</h2>
                 <p>Lorem ipsum dolor sit onsequatur totam quaerat quibusdam sit fugit eaque totam quaerat quibusdam sit fugit eaque quia dolorum.</p>
-
+ 
             </div>
         
                 
@@ -612,6 +622,22 @@
 
         observer.observe(aboutImg);
     });
+   
+
+    document.addEventListener("scroll", () => {
+    const shapes = document.querySelectorAll('.shape');
+    const scrollY = window.scrollY;
+    
+    // Move shapes down as you scroll
+    shapes.forEach(shape => {
+        shape.style.transform = `translateY(${scrollY * 0.3}px)`; // Adjust the factor for speed
+    });
+});
+
+
+
+
+
 </script>
 
 

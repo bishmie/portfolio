@@ -5,6 +5,8 @@
 
 body {
     background-color: black;
+    overflow-x: hidden;
+    z-index: 99;
 }
 
 .navibar {
@@ -335,7 +337,47 @@ li a:hover {
      .contact-p{
         width: 40%;
      }
-}
+     .skills-title p{
+        
+            font-size: 10px;
+           
+            
+        }
+        .projects-heading{
+            margin-left: 350px;
+        }
+        .portfolio h1{
+            margin-left: 330px;
+        } 
+
+        .projects-section{
+            padding: 40px;
+        }
+         /* .project-card{
+            
+   
+           height: 290px; 
+   
+        } */
+
+        .btn-group{
+            margin-bottom: 40px;
+        }
+        .projects-p{
+           margin-left: 300px;
+        }
+        .service-p{
+            margin-left: 300px;
+        }
+         .port-btn{
+          margin-left: 300px;
+         }
+     }
+
+     
+
+/* ----------------------------------------------1024px--------------------------------------------------------- */
+
 
 /* about me starts */
 .about-me{
@@ -370,7 +412,7 @@ li a:hover {
 .about-desc{
     color: rgb(201, 195, 195);
 
-    font-family: "Fahkwang", sans-serif;
+    font-family: "Fahkwang", sans-serif; 
 }
 .about-desc h1{
     font-size: 40px;
@@ -754,7 +796,7 @@ li a:hover {
  */
 
  .skills {
-    background-color: #0e0d0d; 
+    background-color: #0e0d0d;
     color: white; 
     padding: 20px; 
     font-family: "Inter Tight", sans-serif; 
@@ -809,8 +851,11 @@ li a:hover {
 .projects-heading{
     font-size: 40px;
     font-family: "Inter Tight", sans-serif;
-    margin-left: 480px;
+    /* margin-left: 480px; */
     padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+  justify-self: center;
  
 }
 
@@ -829,9 +874,10 @@ li a:hover {
     font-weight: 600;
     text-align: center;
     margin-top: 70px;
-    margin-left: 380px;
+    /* margin-left: 380px; */
     color: #acaaaa;
-    
+    display: flex;
+    justify-self: center;
 } 
  
 .pro-cards {
@@ -880,7 +926,7 @@ li a:hover {
     font-size: 15px;
     /* padding-left: 8px; */
     color: #acaaaa;
-    text-align: justify;
+    text-align: left;
     padding-top: 0px;
 }
 .live button{
@@ -913,6 +959,7 @@ li a:hover {
     position: relative;
     height: auto;
     padding-bottom: 40px;
+   
 }
 .portfolio h1{
     color: #ecb80c;
@@ -920,6 +967,9 @@ li a:hover {
     font-family: "Roboto", sans-serif;
     text-align: center;
     padding-bottom: 40px;
+    /* display: flex;
+    justify-self: center; */
+
     
 
 }
@@ -983,13 +1033,17 @@ li a:hover {
 
 .port-btn{
     display: flex;
-    justify-content: center;
+    justify-self: center; 
     background-color: #1a1919;
     color: white;
     border: 2px solid #ecb80c;
-    margin-left: 600px;
-    margin-top: 20px;
-    padding: 15px 35px;
+    /* margin-left: 600px;
+    margin-top: 20px; */
+     /* margin: auto;
+    position: relative; */
+    
+     padding: 15px 35px;
+    
     /* position: absolute;
     left:500px; */
     
@@ -1009,8 +1063,10 @@ li a:hover {
     font-weight: 600;
     text-align: center;
     margin-top: 70px;
-    margin-left: 330px;
+    /* margin-left: 330px; */
     color: #acaaaa;
+    display: flex;
+    justify-self: center;
 }
 
 .projects-container {
@@ -1111,9 +1167,8 @@ li a:hover {
 .contact{
     color: white;
     font-family: "Inter Tight", sans-serif;
-    padding-top: 90px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 100px;
+    margin-top: 40px;
 
 }
 .fa-phone, .fa-location-dot, .fa-envelope{
@@ -1323,3 +1378,73 @@ footer{
     padding-top: 30px;
 }
 /* footer ends */
+
+
+
+.blob-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Keeps blobs behind content */
+    pointer-events: none; /* Prevents blobs from affecting page interaction */
+}
+
+.blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #FFD700, #FF8C00, #FF4500); /* Shiny gradient colors */
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.8;
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Unique sizes and positions for each blob */
+.blob1 {
+    top: 10%;
+    left: 20%;
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle at 30% 30%, #ecb80c, #ecb80c, white);
+    animation-delay: 0s;
+}
+ 
+.blob2 {
+    top: 30%;
+    left: 80%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #FFD700, white, #FFD700);
+    animation-delay: 2s;
+}
+
+.blob3 {
+    top: 67%;
+    left: 2%;
+    width: 150px;
+    height: 180px;
+    background: radial-gradient(circle at 30% 30%, #ecb80c, white, #f1c40f);
+    animation-delay: 4s;
+}
+
+.blob4 {
+    top: 80%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at 30% 30%, white, #f1c40f, white);
+    animation-delay: 6s;
+}
+
+/* Floating and Pulsating Animation */
+@keyframes float {
+    0% { transform: translateY(0) translateX(0) scale(1); }
+    25% { transform: translateY(-50px) translateX(30px) scale(0.8); }
+    50% { transform: translateY(40) translateX(40) scale(1.1); }
+    75% { transform: translateY(20px) translateX(-30px) scale(0.5); }
+    100% { transform: translateY(30) translateX(40) scale(1); }
+}
