@@ -375,7 +375,10 @@ li a:hover {
 
          
          
-         
+         /* .contact-h1{
+            padding: 0;
+            margin: 0;
+         } */
      }
 
      
@@ -811,7 +814,8 @@ li a:hover {
 .title {
     text-align: center; 
     font-size: 32px; 
-    margin-bottom: 30px; }
+    margin-bottom: 30px; 
+}
 
 .skills-container {
     display: flex; 
@@ -829,11 +833,42 @@ li a:hover {
     background-color: #202020; 
     padding: 15px; 
     border-radius: 10px; 
-    transition: transform 0.3s; 
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Start from below */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for both hover and slide-in */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 
+/* Add the modern slide-in animation */
+.skill.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: modern-slide-in 0.8s ease-out forwards;
+}
+
+@keyframes modern-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hover Effect */
 .skill:hover {
-    transform: scale(1.05); 
+    transform: scale(1.1); /* Make the card slightly larger */
+}
+
+/* Smooth Transition */
+.skill {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Ensures transition applies to both animation and hover */
 }
 
 .skill-icon {
@@ -841,7 +876,8 @@ li a:hover {
     height: 60px; 
     margin-bottom: 10px; 
 }
-.skill-name{
+
+.skill-name {
     font-size: 14px;
 }
 
