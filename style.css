@@ -372,6 +372,10 @@ li a:hover {
          .port-btn{
           margin-left: 300px;
          }
+
+         
+         
+         
      }
 
      
@@ -1169,6 +1173,8 @@ li a:hover {
     font-family: "Inter Tight", sans-serif;
     padding: 100px;
     margin-top: 40px;
+   /* display: flex;
+   justify-content: space-around; */
 
 }
 .fa-phone, .fa-location-dot, .fa-envelope{
@@ -1183,7 +1189,7 @@ li a:hover {
 }
 
 .contact-p{
-    width: 600px; 
+    /* width: 600px;  */
     text-align: left;
     padding-top: 40px;
     line-height: 23px;
@@ -1220,8 +1226,8 @@ li a:hover {
 }
 .contact-us{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
+    grid-template-columns: 1fr 1fr;
+} 
 
 .form-container input{
       width: 70%;
@@ -1241,6 +1247,7 @@ li a:hover {
 
 .form-container{
    background-color: #1a1919;
+   /* height: 32vh; */
    
 }
 .contact-form{
