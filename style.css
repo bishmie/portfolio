@@ -63,7 +63,7 @@ li a:hover {
         flex-direction: row; 
         align-items: center;
         justify-content: space-between;
-    }
+    } 
 
     .logo {
         margin-left: 20px;  
@@ -109,6 +109,7 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+   
     /* margin-top: 0px; */
 }
 .title-two{
@@ -135,17 +136,17 @@ li a:hover {
 }
 .title-style h1{
     font-family: "Fahkwang", sans-serif;
-    font-size: 70px;
+    font-size: 60px;
     margin-bottom: 15px;
 }
 .title-style h2{
     font-family: "Fahkwang", sans-serif;
-    font-size: 65px;
+    font-size: 55px;
     margin-bottom: 15px;
 }
 .text{
     font-family: "Fahkwang", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
@@ -197,7 +198,7 @@ li a:hover {
     margin-top: 10px;
     font-family: "Inter Tight", sans-serif;
     border-radius: 6px;
-    transform: translateX(-25px);   
+    transform: translateX(-1px);   
 
 }
 .header-btn1:hover{
@@ -221,7 +222,7 @@ li a:hover {
     margin-top: 10px;
     font-family: "Inter Tight", sans-serif;
     border-radius: 6px;
-    transform: translateX(-180px);   
+    transform: translateX(-120px);   
 
 }
 
@@ -233,12 +234,12 @@ li a:hover {
     position: relative;
     text-decoration: none;
     color: #f1c40f; /* Default color */
-    font-size: 19px;
+    font-size: 20px;
     transition: transform 0.3s, color 0.3s;
     margin-bottom: 10px;
     background-color: rgba(70, 66, 53, 0.185);
-    width: 33px;
-    height: 33px;
+    width: 20px;
+    height: 20px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     padding: 5px;
@@ -250,6 +251,38 @@ li a:hover {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
+/* Style for the GitHub icon container */
+#github-icon {
+    background-color: rgba(70, 66, 53, 0.185);
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transition: transform 0.3s, color 0.3s;
+   
+}
+
+/* Style specifically for the Font Awesome icon */
+#github-icon i {
+    color: #f1c40f; /* Initial color */
+    
+    font-size: 20px; /* Adjust size as needed */
+}
+
+/* Hover effect */
+#github-icon:hover {
+    transform: scale(1.1);
+}
+
+#github-icon:hover i {
+    color: white; /* Change icon color on hover */
+}
+
+
 
 .social-icon:hover {
     transform: scale(1.1); /* Slightly enlarge the icon */
@@ -1491,3 +1524,48 @@ footer{
     75% { transform: translateY(20px) translateX(-30px) scale(0.5); }
     100% { transform: translateY(30) translateX(40) scale(1); }
 }
+
+
+
+/* --------------------------------768px starts -------------------------------------------*/
+
+@media (max-width: 768px)  {
+
+    .title-two{
+        color: white;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .content-section p{
+        color:white;
+        /* max-width: 600px; */
+        margin-bottom: 30px;
+    }
+    .img2{
+        
+        height: 500px;
+        background-position: center;
+        /* transform: translateY(-20px); */
+    }
+
+    .title-style h1{
+        font-family: "Fahkwang", sans-serif;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .title-style h2{
+        font-family: "Fahkwang", sans-serif;
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .text{
+        font-family: "Fahkwang", sans-serif;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* --------------------------------768px starts -------------------------------------------*/
