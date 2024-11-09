@@ -20,7 +20,7 @@
 <body>
     <div class="home">
 <nav class="navibar">
-    <h1 class="logo">B I S H M I</h1>
+    <h1 class="logo">BISH<span class="logo-mie">mie</span></h1>
      
     <ul class="naviList"> 
         <li><a href="#">Home </a></li>
@@ -31,12 +31,12 @@
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
 </nav>
- <div class="blob-container">
+ <!-- <div class="blob-container">
         <div class="blob blob1"></div>
         <div class="blob blob2"></div>
         <div class="blob blob3"></div>
         <div class="blob blob4"></div>
-    </div>
+    </div> -->
 
 
 
@@ -44,10 +44,10 @@
     <div class="content-section">
         <div class="title-style">
             <h1 class="title-two">  
-                 <h2>I <span class="am"> am</span></h2>  
-               <h1>  Bishmie Witharana</h1> 
+                 <h2>Welcome to my portfolio</h2>  
+               <h1> I'm Bishmie Witharana</h1> 
                <div class="text">
-                <span>U</span><span>I</span><span>/</span><span>U</span><span>X</span><span>&nbsp;</span><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>r</span>
+                <h3>UI/UX Engineer</h3>
               </div>
             </h1>
         </div>
@@ -101,81 +101,63 @@
 </section>
 
 
+
 <!-- about me  -->
-<section class="about-me">
-    <div class="about-img">
-     <img src="Images/about.jpeg" class="aboutimg">
-    </div>
-   
-    <div class="about-desc">
-     
-     <h1>ABOUT <span class="me"> ME</span> </h1>
-     <h2>AN UI/UX ENGINEER FROM SRI LANKA</h2>
-     <div class="about-details">
-         <table>
-             <tr>
-               <td><strong>First Name:</strong></td>
-               <td>Bishmi</td>
-               <td><strong>Last Name:</strong></td>
-               <td>Witharana</td>
-             </tr>
-             <tr>
-               <td><strong>Age:</strong></td>
-               <td>22 years</td>
-               <td><strong>Address:</strong></td>
-               <td>Baduraliya, Kalutara</td>
-             </tr>
-             <tr>
-                 <td><strong>Contact:</strong></td>
-                 <td>0781302664</td>
-                 <td><strong>Email:</strong></td>
-                 <td>Bishmimalshi@gmail.com</td>
-               </tr>
-               <tr>
-                 <td><strong>Nationality:</strong></td>
-                 <td>Sri Lanka</td>
-                 <td><strong>Edu Status:</strong></td>
-                 <td>Undergraduate</td>
-               </tr>
-           </table>
-           
-     </div>
-    
-     
-    </div>
- </section>
+
  <!-- education starts -->
- <section class="education">
-    <h1>EDUCATION</h1>
-    <div class="edu-cards">
-        
-        <div class="line"></div> <!-- Vertical line -->
-        
-        <div class="primary-edu">
-            <div class="dot"></div> <!-- Animated dot -->
-            <div class="primary">
-                <i class="fa-solid fa-school"></i>
-                <p class="year1">2013-2021</p>
-                <h2>Secondary Education - Ananda Sastralaya</h2>
-                <p class="edu-des">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                    posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, 
-                    ullamcorper sit amet ligula.</p>
-            </div>
+ <section class="about-me">
+    <div class="about-img">
+        <img src="Images/about.jpeg" class="aboutimg">
+    </div>
+    <div class="about-desc">
+        <h1>ABOUT <span class="me">ME</span></h1>
+        <h2>AN UI/UX ENGINEER FROM SRI LANKA</h2>
+
+        <!-- Tab options for switching sections -->
+        <div class="tab-options">
+            <span class="tab-link active" onclick="showContent('personal')">Personal Details</span> |
+            <span class="tab-link" onclick="showContent('education')">Educational Background</span>
         </div>
-        
-        <div class="secondary-edu"></div>
-            
-        <div class="secondary">
-            <div class="dot"></div> <!-- Animated dot -->
-            <i class="fa-solid fa-user-graduate"></i>
-            <p class="year2"> 2023 - Present</p>
-            <h2>Higher Education - IJSE Institute</h2>
-            <p class="edu-des">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, 
-                ullamcorper sit amet ligula.</p>
+
+        <!-- Content wrapper to avoid layout shifting -->
+        <div class="content-wrapper">
+            <!-- Personal Details Section (Default View) -->
+            <div id="personal" class="about-details">
+                <table>
+                    <tr>
+                        <td><strong>First Name:</strong></td><td>Bishmi</td>
+                        <td><strong>Last Name:</strong></td><td>Witharana</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Age:</strong></td><td>22 years</td>
+                        <td><strong>Address:</strong></td><td>Baduraliya, Kalutara</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact:</strong></td><td>0781302664</td>
+                        <td><strong>Email:</strong></td><td>Bishmimalshi@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nationality:</strong></td><td>Sri Lanka</td>
+                        <td><strong>Edu Status:</strong></td><td>Undergraduate</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Educational Background Section (Hidden by Default) -->
+            <div id="education" class="about-details" style="display: none;">
+                <table>
+                    <tr>
+                        <td><strong>Secondary Education:</strong></td><td>Ananda Sastralaya Matugama</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Higher Education:</strong></td><td>Institute Of Sofware Engineering (IJSE)</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </section>
+
 
   <!-- education ends -->
   
@@ -670,6 +652,15 @@ document.addEventListener('DOMContentLoaded', checkVisibility);
 
 });
 
+function showContent(section) {
+    document.getElementById('personal').style.display = section === 'personal' ? 'block' : 'none';
+    document.getElementById('education').style.display = section === 'education' ? 'block' : 'none';
+
+    // Update active class for underline
+    document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
+    document.querySelector(`.tab-link[onclick="showContent('${section}')"]`).classList.add('active');
+}
+
 
 
 
@@ -680,3 +671,8 @@ document.addEventListener('DOMContentLoaded', checkVisibility);
 
 </body>
 </html>
+
+
+
+
+

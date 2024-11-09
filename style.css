@@ -21,10 +21,15 @@ body {
 
 .logo {
     color: #ecb80c;
-    font-family: "Londrina Shadow", sans-serif;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
     font-weight: bolder;
     margin-left: 60px;
-    font-size: 18px;
+    font-size: 20px;
+}
+.logo-mie{
+    color: white;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-size: 22px;
 }
 
 .naviList {
@@ -39,9 +44,9 @@ body {
 .naviList li a {
     text-decoration: none;
     color: white;
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Mona Sans", sans-serif;
     padding-right: 35px;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 li a:hover {
@@ -114,8 +119,9 @@ li a:hover {
 }
 .title-two{
     color: white;
-    font-size: 50px;
+    font-size: 20px;
     margin-bottom: 30px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 
@@ -135,14 +141,17 @@ li a:hover {
     transform: translateX(60px);
 }
 .title-style h1{
-    font-family: "Fahkwang", sans-serif;
-    font-size: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 50px;
     margin-bottom: 15px;
 }
 .title-style h2{
-    font-family: "Fahkwang", sans-serif;
-    font-size: 55px;
+   
+    font-size: 19px;
     margin-bottom: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: lighter;
+    color: #6b6a6a;
 }
 .text{
     font-family: "Fahkwang", sans-serif;
@@ -425,7 +434,7 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-     background-color: #0e0d0d;
+     background-color: #000000;
     /* margin-top: 20px; */
     color: white;
     position: relative;
@@ -531,6 +540,71 @@ li a:hover {
 
 
 /* about me ends */
+
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 40px 20px;
+}
+
+.aboutimg {
+    height: 500px;
+    width: 500px;
+    margin-top: 60px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease-out;
+}
+
+.tab-options {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #ecb80c;
+    text-decoration: none;
+    transition: border-bottom 0.3s;
+}
+
+.tab-link.active {
+    border-bottom: 2px solid #ecb80c;
+}
+
+.content-wrapper {
+    margin-top: 20px;
+    min-height: 150px; /* Ensures content space remains stable */
+}
+
+.about-details table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    font-size: 14px;
+}
+
+.about-details td {
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutimg {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
 
 
 /* education starts */
@@ -1027,7 +1101,7 @@ li a:hover {
 /* project ends */
 /* portfolio starts */
 .portfolio{
-    background-color: #1a1919;
+    background-color: #0e0d0d;
     padding-top: 90px;
     position: relative;
     height: auto;
