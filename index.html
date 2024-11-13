@@ -111,12 +111,13 @@
     </div>
     <div class="about-desc">
         <h1>ABOUT <span class="me">ME</span></h1>
-        <h2>AN UI/UX ENGINEER FROM SRI LANKA</h2>
+        <!-- <h2>AN UI/UX ENGINEER FROM SRI LANKA</h2> -->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure at fugit, est reiciendis asperiores quasi a dicta dolorum. Voluptate omnis, accusamus aliquid iusto ratione deleniti ut fugit dicta aperiam nobis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus est illo explicabo cum necessitatibus a. Architecto tenetur ullam qui. Est exercitationem porro facere nostrum ab provident numquam sed corrupti asperiores!</p>
 
         <!-- Tab options for switching sections -->
         <div class="tab-options">
             <span class="tab-link active" onclick="showContent('personal')">Personal Details</span> |
-            <span class="tab-link" onclick="showContent('education')">Educational Background</span>
+            <span id="edu-tab" class="tab-link" onclick="showContent('education')">Educational Background</span>
         </div>
 
         <!-- Content wrapper to avoid layout shifting -->
@@ -147,7 +148,7 @@
             <div id="education" class="about-details" style="display: none;">
                 <table>
                     <tr>
-                        <td><strong>Secondary Education:</strong></td><td>Ananda Sastralaya Matugama</td>
+                        <td><strong>Secondary Education:</strong></td><td>Ananda Sastralaya Matugama </td>
                     </tr>
                     <tr>
                         <td><strong>Higher Education:</strong></td><td>Institute Of Sofware Engineering (IJSE)</td>
@@ -659,6 +660,7 @@ function showContent(section) {
     // Update active class for underline
     document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
     document.querySelector(`.tab-link[onclick="showContent('${section}')"]`).classList.add('active');
+    
 }
 
 
