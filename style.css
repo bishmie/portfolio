@@ -118,6 +118,12 @@ li a:hover {
    
     /* margin-top: 0px; */
 }
+.content-section{
+     display: flex;
+    flex-direction: column; 
+    margin-left: 30px;
+
+}
 .title-two{
     color: white;
     font-size: 20px;
@@ -141,7 +147,8 @@ li a:hover {
 }
 .title-style{
     color: white;
-    transform: translateX(60px);
+
+    /* transform: translateX(60px); */
 }
 .title-style h1{
     font-family: "Open Sans", sans-serif;
@@ -169,7 +176,8 @@ li a:hover {
   .btn-home{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap:20px;
+    /* justify-content: space-around; */
   }
 .header-btn1 {
     padding-right: 30px; 
@@ -184,7 +192,7 @@ li a:hover {
     margin-top: 10px;
     font-family: "Inter Tight", sans-serif;
     border-radius: 6px;
-    transform: translateX(-1px);   
+    /* transform: translateX(-1px);    */
 
 }
 .header-btn1:hover{
@@ -208,7 +216,7 @@ li a:hover {
     margin-top: 10px;
     font-family: "Inter Tight", sans-serif;
     border-radius: 6px;
-    transform: translateX(-120px);   
+    /* transform: translateX(-120px);    */
 
 }
 
@@ -220,7 +228,7 @@ li a:hover {
     position: relative;
     text-decoration: none;
     color: #f1c40f; /* Default color */
-    font-size: 20px;
+    font-size: 17px;
     transition: transform 0.3s, color 0.3s;
     margin-bottom: 10px;
     background-color: rgba(70, 66, 53, 0.185);
@@ -238,18 +246,9 @@ li a:hover {
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 /* Style for the GitHub icon container */
-#github-icon {
-    background-color: rgba(70, 66, 53, 0.185);
-    width: 20px;
-    height: 20px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    transition: transform 0.3s, color 0.3s;
-   
+
+.fa-github{
+    font-size:17px ;
 }
 
 /* Style specifically for the Font Awesome icon */
@@ -264,8 +263,8 @@ li a:hover {
     transform: scale(1.1);
 }
 
-#github-icon:hover i {
-    color: white; /* Change icon color on hover */
+.fa-github:hover{
+    color: white;
 }
 
 
@@ -277,32 +276,48 @@ li a:hover {
 
 @media (max-width: 1024px)  {
     .second-part{
-        margin: 20px;
+        /* margin: 20px; */
         margin-bottom: 0px;
         
     }
     .title-style h1{
-        font-size:40px ;
+        font-size:30px !important ;
     }
     .title-style h2{
         font-size: 15px;
     }
     .title-style h3{
-        font-size: 30px;
+        font-size: 26px !important;
+    }
+    .social-icon{
+        font-size: 12px !important;
+    }
+    .fa-github{
+        font-size: 12px !important;
+    }
+
+    .header-btn1{
+        padding: 5px 20px !important;
+    }
+    .btn-home{
+        font-size: 12px !important;
+    }
+    .btn-group i{
+        font-size: 20px !important;
     }
 /* 
     .btn-home{
         gap: 30px;
     } */
-    .header-btn1{
+    /* .header-btn1{
         transform: translateX(24px);
     }
     .header-btn2{
         transform: translateX(-31px);
-    }
+    } */
     .img2{
-        width: 500px;
-        height: 600px;
+        /* width: 500px; */
+        height: 500px !important;
     }
 
     .aboutimg{
@@ -368,9 +383,9 @@ li a:hover {
         .portfolio h1{
             margin-left: 330px;
         } 
-
-        .projects-section{
-            padding: 40px;
+       
+        .projects-section{  
+            padding: 40px; 
         }
          /* .project-card{
             
@@ -392,6 +407,19 @@ li a:hover {
           margin-left: 300px;
          }
 
+         .project-card {
+            /* background-color: #222519; */
+            background-color: #202020;
+            width: calc(50% - 20px) !important; /* 4 cards per row with gap */
+            height: 340px; /* Reduced height */
+            margin-bottom: 20px;
+            padding: 10px;  /* Reduced padding */
+            border: 1px solid gray;
+            box-sizing: border-box;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.6); /* Gray shadow around the box */
+        
+        }
          
          
          /* .contact-h1{
@@ -591,6 +619,12 @@ li a:hover {
         height: auto;
         margin-top: 20px;
     }
+    /*.navibar{*/
+    /*    width: 100%; !important;*/
+    /*}*/
+    /*.rating-section{*/
+    /*    width: 100%; !important;*/
+    /*}*/
 }
 
 
@@ -1290,7 +1324,7 @@ li a:hover {
     text-align: center;
 }
 
-.fa-github{
+.btn-group i{
     color: #ecb80c;
     font-size: 30px;
 }
@@ -1536,24 +1570,23 @@ footer{
     .content-section{
         margin-top: 80px;
         margin-bottom: 100px;
-        margin-right: 10px;
+        
         padding-left: 0px;
     }
     
     
     .img2{
         
-        height: 240px;
-        width: 240px;
+        height: 200px !important;
+        width: 200px !important;
         background-position: center;
         border-radius: 50%;
-        margin-left: 20px;
-        /* transform: translateY(-20px); */
+       
     }
 
     .title-style h1{
         font-family: "Fahkwang", sans-serif;
-        font-size: 30px;
+        font-size: 35px;
         margin-bottom: 15px;
     }
     .title-style h2{
@@ -1576,10 +1609,10 @@ footer{
     .header-btn1{
         font-size: 14px;
         padding: 8px 23px;
-        transform: translateX(40px);
+       
     }
     .header-btn2{
-        transform: translateX(16px);
+       
         font-size: 14px;
         padding: 8px 23px;
     }
@@ -1633,3 +1666,38 @@ footer{
 }
 
 /* --------------------------------768px endss -------------------------------------------*/
+
+@media (max-width: 1440px)  {
+
+
+    .second-part{
+        /* margin: 20px; */
+        margin-bottom: 0px;
+        
+    }
+    .title-style h1{
+        font-size:45px ;
+    }
+    .title-style h2{
+        font-size: 15px;
+    }
+    .title-style h3{
+        font-size: 40px;
+    }
+/* 
+    .btn-home{
+        gap: 30px;
+    } */
+    /* .header-btn1{
+        transform: translateX(24px);
+    }
+    .header-btn2{
+        transform: translateX(-31px);
+    } */
+    .img2{
+        /* width: 500px; */
+        height: 600px;
+    }
+
+}
+
