@@ -82,7 +82,7 @@ li a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-   
+
    
     /* margin-top: 0px; */
 }
@@ -90,6 +90,11 @@ li a:hover {
      display: flex;
     flex-direction: column; 
     margin-left: 30px;
+    margin-bottom:200px;
+    margin-top:100px;
+
+
+
 
 }
 .title-two{
@@ -107,8 +112,13 @@ li a:hover {
 }
 .img2{
     
-    height: 600px;
-  
+    height: 300px;
+    width:300px;
+    border-radius:100%;
+    margin-bottom:200px;
+    margin-top:100px;
+
+
     background-position: center;
    
     /* transform: translateY(-20px); */
@@ -1174,8 +1184,10 @@ footer{
         
         height: 200px !important;
         width: 200px !important;
+        border-radius:100% !important;
         background-position: center;
-        border-radius: 50%;
+        margin-top:50px !important;
+        margin-bottom:100px !important;/*        border-radius: 50%;*/
        
     }
 
@@ -1364,7 +1376,10 @@ footer{
     } */
     .img2{
     /* width: 500px; */
-        height: 500px ;
+        height: 300px ;
+        width: 300px;
+        border-radius:100% !important;
+        background-position: center;
     }
 
     .aboutimg{
@@ -1515,16 +1530,19 @@ footer{
     } */
     .img2{
         /* width: 500px; */
-        height: 600px;
+        height: 300px ;
+        width: 300px ;
+        border-radius:100% !important;
+        background-position: center;
     }
 
 }
-/*1440 px ends */
+/* ========================================1440 px ends============================================== */
 
 
 
 
-/*        425 px starts here*/
+/*      ======================================== 425 px starts here ======================================*/
 
 @media (max-width: 425px)  {
 
@@ -1532,8 +1550,11 @@ footer{
     transform:translateY(200px);
 }
     .img2{
-     transform:translate(3px,-500px);
+     transform:translate(3px,-510px);
 
+    }
+        .content-section{
+        margin-bottom:50px;
     }
 
     .title-style h1{
