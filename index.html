@@ -21,17 +21,19 @@
     <div class="home">
 <nav class="navibar">
     <h1 class="logo">BISH<span class="logo-mie">mie</span></h1>
-     
-    <ul class="naviList"> 
-        <li><a href="#">Home </a></li>
-        <li><a href="#">About </a></li>
-        <li><a href="#">Services </a></li>
-        <li><a href="#">Contact </a></li>
+
+    <ul class="naviList">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
+
 </nav>
 
+        <div class="star-container"></div>
 
 <!--        <div class="background" id="star-container"></div>-->
 
@@ -62,22 +64,22 @@
 
 </section>
 
-<div class="social-icons">
-    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://twitter.com" target="_blank" class="social-icon twitter">
-        <i class="fa-brands fa-twitter"></i>    </a>
-    <a href="https://github.com" target="_blank" class="social-icon github">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
+<!--<div class="social-icons">-->
+<!--    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">-->
+<!--      <i class="fab fa-facebook-f"></i>-->
+<!--    </a>-->
+<!--    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">-->
+<!--      <i class="fab fa-instagram"></i>-->
+<!--    </a>-->
+<!--    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin">-->
+<!--      <i class="fab fa-linkedin-in"></i>-->
+<!--    </a>-->
+<!--    <a href="https://twitter.com" target="_blank" class="social-icon twitter">-->
+<!--        <i class="fa-brands fa-twitter"></i>    </a>-->
+<!--    <a href="https://github.com" target="_blank" class="social-icon github">-->
+<!--      <i class="fab fa-github"></i>-->
+<!--    </a>-->
+<!--  </div>-->
 </section>
     </div>
 
@@ -514,7 +516,35 @@
 
 <script>
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const starContainer = document.querySelector(".star-container");
+
+        function createStar() {
+            const star = document.createElement("div");
+            star.classList.add("star");
+
+            // Randomize position and speed
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${-10 + Math.random() * 10}vh`;
+            const duration = Math.random() * 8 + 3; // Between 3s and 11s
+            star.style.animationDuration = `${duration}s`;
+
+            starContainer.appendChild(star);
+
+            // Remove the star after it moves off screen
+            setTimeout(() => {
+                star.remove();
+            }, duration * 1000);
+        }
+
+        // Generate stars every 100 milliseconds
+        setInterval(createStar, 100);
+    });
+
+
 </script>
+
+
 </html>
 
 

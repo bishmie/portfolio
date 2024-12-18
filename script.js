@@ -101,9 +101,3 @@ document.querySelector('#assignment10').addEventListener('click', function() {
 
 
 
-
-
-
-
-
-
