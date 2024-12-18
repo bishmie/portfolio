@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            color: #fff;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 60vw;
+            max-width: 600px;
+            height: auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid gold;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        #hed {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: gold;
+        }
+
+        .label {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .button-28 {
+            appearance: none;
+            background-color: rgba(255, 215, 0, 0.1);
+            color: gold;
+            border: 1px solid gold;
+            border-radius: 12px;
+            padding: 12px 24px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 300ms ease;
+        }
+
+        .button-28:hover {
+            background-color: gold;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                width: 80vw;
+                padding: 15px;
+            }
+
+            #hed {
+                font-size: 2rem;
+            }
+
+            .button-28 {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 90vw;
+                padding: 10px;
+            }
+
+            #hed {
+                font-size: 1.8rem;
+            }
+
+            .button-28 {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="card">
+        <h1 id="hed">Assignment 01</h1>
+        <div class="label">
+<!--            <a href="files/index.html"><button class="button-28" role="button">Site map</button></a>-->
+            <a href="../../index.html"><button class="button-28" role="button">Index File</button></a>
+        </div>
+        <div class="label">
+            <a href="https://www.gloomaps.com/EGWwJVnZKc"><button class="button-28" role="button">Wire frame</button></a>
+        </div>
+        <div class="label">
+            <a href="https://www.figma.com/design/mAnvOoAhVjgz4d40rueOyN/My-new-Portfolio?node-id=0-1&t=GCfMQoJaBPIi18cG-1"><button class="button-28" role="button">Mock up</button></a>
+        </div>
+
+    </div>
+</main>
+</body>
+</html>

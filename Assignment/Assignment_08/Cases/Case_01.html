@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14</title>
+</head>
+<style>
+    body{
+        background: #e3f3fc;
+        display: flex;
+        flex-direction: row;
+    }
+    section>div {
+        width: 100px;
+        aspect-ratio: 1/1;
+
+        margin-top: 20vh ;
+        margin-left: 2vw;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+
+    }
+    section>div>h1 {
+        width: max-content;
+        height: max-content;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    body>#img{
+        margin-left: 5vw;
+        margin-top: 18vh;
+    }
+
+
+</style>
+<body>
+<h2>Js Que</h2>
+<section>
+
+    <div> <h1>A</h1> <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+    <div> <h1>B</h1> <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+    <div> <h1>C</h1> <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+    <div> <h1>D</h1> <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+    <div> <h1>E</h1> <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+    <div><h1>F</h1>  <img src="../assets/images/Walk Cycle.gif" height="200" width="220" alt="gif"/></div>
+</section>
+<div id="img">
+    <img src="../assets/images/img_1.png" height="290" width="346" alt="home"/>
+</div>
+<script>
+    let arr = ["A","B", "C","D","E","F"];
+    setInterval(()=>{
+        let last_value =arr.pop();
+        arr.unshift(last_value);
+        console.log(arr);
+
+        document.getElementsByTagName("h1")[0].innerText = arr[0];
+        document.getElementsByTagName("h1")[1].innerText = arr[1];
+        document.getElementsByTagName("h1")[2].innerText = arr[2];
+        document.getElementsByTagName("h1")[3].innerText = arr[3];
+        document.getElementsByTagName("h1")[4].innerText = arr[4];
+        document.getElementsByTagName("h1")[5].innerText = arr[5];
+    },3000)
+</script>
+
+
+</body>
+</html>

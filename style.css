@@ -117,11 +117,25 @@ li a:hover {
     border-radius:100%;
     margin-bottom:200px;
     margin-top:140px;
+    animation: fadeZoomIn 1.5s ease-out forwards;
+
 
 
     background-position: center;
    
     /* transform: translateY(-20px); */
+}
+
+/* Fade and Zoom In Animation */
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .title-style{
     color: white;
@@ -2169,6 +2183,8 @@ footer{
 
 
 }
+
+
 
 
 

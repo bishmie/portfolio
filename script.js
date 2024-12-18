@@ -68,4 +68,42 @@ function showContent(section) {
 
 
 
+document.querySelector('#assignment1').addEventListener('click', function() {
+window.location.href = 'Assignment/Assignment_01/Assignment.html';
+});
+
+document.querySelector('#assignment2').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_02/Assignment.html';
+});
+
+document.querySelector('#assignment3').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_03/Assignment.html';
+});
+document.querySelector('#assignment4').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_04/Assignment.html';
+
+});document.querySelector('#assignment5').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_05/Assignment.html';
+});
+document.querySelector('#assignment6').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_06/Assignment.html';
+});
+document.querySelector('#assignment7').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_08/Assignment.html';
+});
+document.querySelector('#assignment9').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_09/Assignment.html';
+});
+document.querySelector('#assignment10').addEventListener('click', function() {
+    window.location.href = 'Assignment/Assignment_10/Assignment.html';
+});
+
+
+
+
+
+
+
+
+
 

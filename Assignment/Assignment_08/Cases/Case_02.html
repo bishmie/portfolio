@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case02</title>
+    <style>
+        body{
+            background-color: #813271;
+        }
+
+        .box{
+            width: 100px;
+            aspect-ratio: 1/0.5;
+            background-color: #493737;
+            display: inline-block;
+            border-radius: 10px;
+
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 750px;
+            margin: auto;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        div{
+            display: flex;
+            gap: 5px;
+            width: 100%;
+        }
+        section div:nth-child(2){
+            justify-content: center;
+            margin: 2px 0;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding: 4px 0;
+        }
+        section div:nth-child(1){
+            justify-content: flex-start;
+            margin-bottom: 4px;
+        }
+        section div:nth-child(3) {
+            justify-content: flex-end;
+            margin-top: 2px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<section class="main">
+    <div><span id="red" class="box"></span></div>
+    <div>
+        <span id="green" class="box"></span>
+        <span id="blue" class="box"></span>
+        <span id="yellow" class="box"></span>
+        <span id="lightpink" class="box"></span>
+    </div>
+    <div><span id="purple" class="box"></span></div>
+</section>
+
+<script src="jquery-3.7.1.min.js"></script>
+
+<script>
+    let color = ["red", "lightpink", "blue", "yellow", "white", "purple"];
+    const boxes=document.querySelectorAll(".box")
+    console.log(boxes)
+
+    setInterval(() => {
+        let last = color.pop();
+        color.unshift(last);
+
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor=color[i]
+        }
+    },2000)
+
+</script>
+
+</body>
+</html>

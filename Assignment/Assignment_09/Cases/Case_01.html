@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #kiit {
+            /*width: fit-content;*/
+            background: palevioletred;
+            position: absolute;
+            /*height: fit-content;*/
+            border: 3px solid purple;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 100px;
+        }
+        #light-panel {
+            display: flex;
+            justify-content: center;
+        }
+        #light-panel div {
+            width: 60px;
+            height: 40px;
+            border: 1px solid black;
+            margin: 10px;
+            background-color: #734a5b;
+            display: inline-flex;
+        }
+        #button-panel {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button{
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<section id="kiit">
+    <section id="light-panel">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+
+    </section>
+    <section id="button-panel">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </section>
+</section>
+
+<script src="../lib/jquery-3.7.1.min.js.js"></script>
+
+<script>
+    const light_count = 6;
+    let current_light = -1;
+    let direction = "Right";
+    let intervalId = null;
+
+    updateLight = () => {
+        if (direction === "Right") {
+            current_light++;
+            $(".light").css("background", "white");
+            $(".light").eq(current_light).css("background", "red");
+            $(".light").eq(current_light-1).css("background", "pink");
+
+            /* $(".light").eq(current_light-2).css("background", "purple");*/
+
+            if (current_light==light_count-1){
+                direction = "Left";
+            }
+
+        }else {
+            current_light--;
+            $(".light").css("background", "white");
+            $(".light").eq(current_light).css("background", "red");
+            $(".light").eq(current_light+1).css("background", "pink");
+            /*$(".light").eq(current_light+2).css("background", "purple");*/
+
+            if (current_light==0){
+                direction = "Right";
+            }
+        }
+    }
+
+
+
+    $('#start').on('click', function(){
+        intervalId = setInterval(updateLight, 500);
+
+    });
+
+    $('#stop').on('click', function(){
+        clearInterval(intervalId)
+    });
+
+</script>
+</body>
+</html>
