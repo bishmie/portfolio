@@ -88,7 +88,7 @@ document.querySelector('#assignment4').addEventListener('click', function() {
 document.querySelector('#assignment6').addEventListener('click', function() {
     window.location.href = 'Assignment/Assignment_06/Assignment.html';
 });
-document.querySelector('#assignment7').addEventListener('click', function() {
+document.querySelector('#assignment8').addEventListener('click', function() {
     window.location.href = 'Assignment/Assignment_08/Assignment.html';
 });
 document.querySelector('#assignment9').addEventListener('click', function() {
@@ -99,5 +99,22 @@ document.querySelector('#assignment10').addEventListener('click', function() {
 });
 
 
+
+function showContentNav(tab) {
+    if (tab === 'about-me') {
+        document.querySelector('.about-me').style.display = 'block';
+//        document.querySelector('.education').style.display = 'none';
+    }  if (tab === 'home') {
+        document.querySelector('.home').style.display = 'block';
+
+    }
+    if(tab=== 'services'){
+        document.querySelector('.services').style.display = 'block';
+    }
+    if(tab=== 'contact'){
+        document.querySelector('.contact').style.display = 'block';
+    }
+
+}
 
 

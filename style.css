@@ -10,6 +10,9 @@ body,html {
     position:relative;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -55,7 +58,12 @@ body,html {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #1a1919;
-    
+
+    position: sticky;
+    top: 0; /* Make the navbar stick to the top */
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+    width: 100%;
+
 }
 
 .logo {
@@ -2253,9 +2261,34 @@ footer{
         margin-bottom: 15px;
     }
 
+    .aboutimg{
+        width:300px;
+        height:300px;
+    }
+    .about-desc p{
+        width:440px;
+    }
+    .service-p{
+        width:400px;
+    }
+    .projects-p{
+        width:400px;
+    }
+
+    .pro-card {
+        width: calc(100% - 20px) !important; /* 4 cards per row with gap */
+        height: 370px; /* Reduced height */
+    }
+
+    .form-container{
+        background-color: #1a1919;
+        width:440px;}
 
 }
 
 
 
 
+a {
+    pointer-events: auto; /* Ensure the link can be clicked */
+}

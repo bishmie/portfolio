@@ -2,111 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
+    <title>Knight Rider Effect</title>
     <style>
-        #kiit {
-            /*width: fit-content;*/
-            background: palevioletred;
-            position: absolute;
-            /*height: fit-content;*/
-            border: 3px solid purple;
-            right: 0;
-            left: 0;
-            top: 0;
-            bottom: 0;
+        body{
+            background-color: black;
+        }
+        h1 {
+            position: relative;
+            text-align: center;
+            top: 100px;
+            font-size: 50px;
+            font-family: "DejaVu Sans";
+        }
+        section {
+            top: 300px;
             display: flex;
-            flex-direction: column;
+            margin: 0 auto;
+            width: 1250px;
+            height: 100px;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+        }
+        section > div {
+            margin: 25px 10px 0 10px;
+            height: 50px;
+            width: 200px;
+            background-color: #ddd; /* Default color for inactive lights */
+        }
+        .btn {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 200px;
+            margin: 0 auto;
+            gap: 10px;
             align-items: center;
             justify-content: center;
-            margin: 100px;
+            margin-top: 50px;
         }
-        #light-panel {
-            display: flex;
-            justify-content: center;
+        button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            font-family: "DejaVu Sans";
+            background-color: burlywood;
+            border-radius: 30px;
+            border: none;
         }
-        #light-panel div {
-            width: 60px;
-            height: 40px;
-            border: 1px solid black;
-            margin: 10px;
-            background-color: #734a5b;
-            display: inline-flex;
-        }
-        #button-panel {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
-        button{
-            font-size: 18px;
-            padding: 10px 15px;
-            border-radius: 20px;
-        }
+
     </style>
 </head>
 <body>
-<section id="kiit">
-    <section id="light-panel">
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-        <div class="light"></div>
-
-    </section>
-    <section id="button-panel">
-        <button id="start">START</button>
-        <button id="stop">STOP</button>
-    </section>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
 </section>
 
-<script src="../lib/jquery-3.7.1.min.js.js"></script>
+<div class="btn">
+    <button onclick="stop()">Stop</button>
+    <button onclick="start()">Start</button>
+</div>
 
 <script>
-    const light_count = 6;
-    let current_light = -1;
-    let direction = "Right";
-    let intervalId = null;
+    let currentIndex = 0;
+    let direction = 1;
+    const divs = document.querySelectorAll("section > div");
 
-    updateLight = () => {
-        if (direction === "Right") {
-            current_light++;
-            $(".light").css("background", "white");
-            $(".light").eq(current_light).css("background", "red");
-            $(".light").eq(current_light-1).css("background", "pink");
+    let intervalId;
 
-            /* $(".light").eq(current_light-2).css("background", "purple");*/
+    function knightRiderEffect() {
+        divs.forEach(div => div.style.backgroundColor = "#ddd");
+        divs[currentIndex].style.backgroundColor = "orange";
 
-            if (current_light==light_count-1){
-                direction = "Left";
-            }
+        currentIndex += direction;
 
-        }else {
-            current_light--;
-            $(".light").css("background", "white");
-            $(".light").eq(current_light).css("background", "red");
-            $(".light").eq(current_light+1).css("background", "pink");
-            /*$(".light").eq(current_light+2).css("background", "purple");*/
-
-            if (current_light==0){
-                direction = "Right";
-            }
+        if (currentIndex === divs.length - 1 || currentIndex === 0) {
+            direction *= -1;
         }
     }
 
+    function start() {
+        if (!intervalId) { // Only start if it's not already running
+            intervalId = setInterval(knightRiderEffect, 100);
+        }
+    }
 
+    function stop() {
+        clearInterval(intervalId);
+        intervalId = null;
+        divs.forEach(div => div.style.backgroundColor = "#ddd");
+        divs[currentIndex].style.backgroundColor= "red"
+    }
 
-    $('#start').on('click', function(){
-        intervalId = setInterval(updateLight, 500);
-
-    });
-
-    $('#stop').on('click', function(){
-        clearInterval(intervalId)
-    });
-
+    // Automatically start the effect when the page loads
+    startKnightRiderEffect();
 </script>
 </body>
 </html>
